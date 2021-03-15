@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cupcake Party!</title>
+  <!--<link rel="stylesheet" href="styles.css"> -->
+</head>
+
+<body>
+  <h1 class="center">Cupcake Party!</h1>
+  <div>
+    <h1>Add a cupcake!</h1>
+    <form id=cupcake-form >
+      
+      <label>Flavor:</label> <input id="flavor" type="text" name="flavor" required>
+      <label>Size:</label> <input id="size" type="text" name="size" required>
+      <label>Rating:</label> <input id="rating" type="text" name="rating" required>
+      <label>Image URL:</label> <input id="image" type="text" name="image" >
+      
+      <a id="cupcakeBtn">Add Cupcake</a>
+    </form>
+  </div>
+  <div id="cupcake-holder">
+    <ul id=cupcake-list>
+  
+    </ul>
+  </div>
+
+
+  
+
+<script src="https://unpkg.com/jquery"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="/static/app.js"></script>
+</body>
+
+</html>

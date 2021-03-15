@@ -19,6 +19,11 @@ db.create_all()
         "image" : self.image
         } """
 
+@app.route("/")
+def index():
+    """ Loads Home Page """
+   
+    return render_template("index.html")
 
 @app.route("/api/cupcakes", methods=["GET", "POST"])
 def show_and_create_cupcakes():
@@ -31,7 +36,7 @@ def show_and_create_cupcakes():
     
 
     json = request.json
-    new_cupcake = Cupcake(flavor=json["flavor"], size=json["size"], rating =json["rating"], image=json.get("image"))
+    new_cupcake = Cupcake(flavor=json["flavor"], size=json["size"], rating =json["rating"], image=json.get("image") or None)
     db.session.add(new_cupcake)
     db.session.commit()
     
